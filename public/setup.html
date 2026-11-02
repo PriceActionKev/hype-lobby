@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set up Hype Lobby</title>
+  <link rel="stylesheet" href="/setup.css">
+</head>
+<body>
+  <main class="page-shell">
+    <nav><a class="brand" href="/">✦ HYPE LOBBY</a><div><a href="/overlay" target="_blank">Open overlay ↗</a><a href="/summary">Last summary</a></div></nav>
+    <header class="page-heading">
+      <p class="eyebrow">STREAMER SETUP</p>
+      <h1>Pick the opening act.</h1>
+      <p>Set up your segments once. When it’s time, press Start Vote and let chat decide.</p>
+    </header>
+
+    <section class="setup-card">
+      <div id="round-status" class="round-status" role="status">Loading your setup…</div>
+      <form id="setup-form">
+        <div class="settings-row">
+          <label class="field">Number of segments
+            <select id="segment-count"><option value="3">3 segments</option><option value="4">4 segments</option></select>
+          </label>
+          <label class="field">Countdown length
+            <span class="seconds-input"><input id="countdown-seconds" type="number" min="5" max="3600" step="1" required><span>seconds</span></span>
+          </label>
+        </div>
+
+        <div id="segment-fields" class="segment-fields"></div>
+
+        <div class="buttons">
+          <button id="save-button" class="save-button" type="submit">Save setup</button>
+          <button id="start-button" class="start-button" type="button">▶ &nbsp; Start Vote</button>
+        </div>
+      </form>
+      <p id="message" class="message" role="status"></p>
+    </section>
+
+    <aside class="tip"><span>💡</span><p><strong>How voting works</strong><br>Chat types <code>!vote 1</code>. Viewers can cheer with <code>!vote 1</code> in the message or redeem points using a <code>Vote 1</code> reward.</p></aside>
+    <footer>Hype Lobby keeps this setup in memory while the app is running.</footer>
+  </main>
+  <script src="/setup.js"></script>
+</body>
+</html>

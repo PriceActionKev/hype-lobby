@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+:root { color-scheme: dark; --ink: #111125; --pink: #ff55ce; --cyan: #51f1f2; --yellow: #ffd76b; --white: #fbf8ff; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; color: var(--white); background: radial-gradient(ellipse at 52% 0, #302052 0, #151426 50%, #10101f 100%); font-family: Outfit, system-ui, sans-serif; }
+.page-shell { width: min(800px, calc(100vw - 36px)); margin: 0 auto; padding: 26px 0 32px; }
+nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 38px; }
+nav a { color: #d6d2e8; font-size: 14px; text-decoration: none; }nav div { display: flex; gap: 20px; }.brand { color: var(--white); font: 800 14px 'DM Mono', monospace; letter-spacing: .1em; }
+.page-heading { margin: 0 auto 28px; max-width: 680px; }.eyebrow { margin: 0 0 8px; color: var(--cyan); font: 700 12px 'DM Mono', monospace; letter-spacing: .18em; }
+h1 { margin: 0; font-size: clamp(38px, 7vw, 58px); line-height: 1.05; letter-spacing: -.045em; }.page-heading>p:last-child { margin: 12px 0 0; color: #bbb8d2; font-size: 17px; line-height: 1.5; }
+.setup-card { padding: 26px; border: 1px solid #ffffff24; border-radius: 24px; background: #1c1a31e8; box-shadow: 0 22px 70px #0005; }
+.round-status { margin-bottom: 22px; padding: 12px 14px; border: 1px solid #51f1f233; border-radius: 12px; color: #b8fafa; background: #51f1f20a; font: 500 13px 'DM Mono', monospace; }.round-status.active { border-color: #ff55ce66; color: #ffd3f3; background: #ff55ce0c; }.round-status.ended { border-color: #ffd76b55; color: #ffe9a8; }.round-status.error { color: #ffaaaa; }
+.settings-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }.field { display: grid; gap: 9px; color: #d7d4e8; font-size: 14px; font-weight: 600; }
+input, select { width: 100%; min-height: 48px; padding: 0 14px; border: 1px solid #ffffff2a; border-radius: 12px; outline: none; color: white; background: #11101f; font: 500 16px Outfit, sans-serif; }input:focus, select:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px #51f1f21b; }
+.seconds-input { position: relative; }.seconds-input input { padding-right: 80px; }.seconds-input span { position: absolute; top: 15px; right: 14px; color: #9290ab; font-size: 13px; pointer-events: none; }
+.segment-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }.segment-field { position: relative; padding-top: 1px; }.segment-number { position: absolute; top: 34px; right: 13px; z-index: 1; color: var(--cyan); font: 700 12px 'DM Mono', monospace; }
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }.buttons button { min-height: 50px; padding: 0 20px; border: 0; border-radius: 13px; cursor: pointer; font: 800 15px Outfit, sans-serif; transition: transform .15s, filter .15s; }.buttons button:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.08); }.buttons button:disabled { opacity: .45; cursor: not-allowed; }
+.save-button { color: var(--white); background: #393653; }.start-button { flex: 1; color: #171225; background: linear-gradient(95deg, var(--cyan), #8affdb); box-shadow: 0 7px 24px #51f1f224; }
+.message { min-height: 20px; margin: 14px 2px 0; font-size: 14px; }.message.success { color: #8fffd2; }.message.error { color: #ff9aab; }
+.tip { display: flex; gap: 14px; margin-top: 20px; padding: 17px 19px; border: 1px solid #ffd76b2b; border-radius: 16px; background: #ffd76b08; }.tip>span { font-size: 22px; }.tip p { margin: 0; color: #c6c2d9; font-size: 13px; line-height: 1.6; }.tip strong { color: #ffe7a0; font-size: 14px; }code { padding: 2px 5px; border-radius: 5px; color: var(--cyan); background: #51f1f212; font-family: 'DM Mono', monospace; }
+footer { margin-top: 25px; color: #77748f; text-align: center; font-size: 12px; }
+@media (max-width: 600px) { .page-shell { width: calc(100vw - 24px); padding-top: 18px; }nav { padding-bottom: 30px; }nav div { gap: 12px; }nav a { font-size: 12px; }.setup-card { padding: 17px; border-radius: 19px; }.settings-row, .segment-fields { grid-template-columns: 1fr; gap: 12px; }.buttons { flex-direction: column-reverse; }.buttons button { width: 100%; }.page-heading>p:last-child { font-size: 15px; } }

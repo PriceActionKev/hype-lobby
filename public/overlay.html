@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hype Lobby Overlay</title>
+  <link rel="stylesheet" href="/overlay.css">
+</head>
+<body>
+  <main class="lobby">
+    <div class="topline"><span class="live-dot"></span><span id="connection">CONNECTING TO LOBBY</span></div>
+    <header>
+      <p class="eyebrow">THE STREAM STARTS WITH YOU</p>
+      <h1>HYPE <span>LOBBY</span></h1>
+      <p class="prompt">Which segment should we kick off with?</p>
+      <div class="countdown-box"><span>VOTING CLOSES IN</span><strong id="countdown">--:--</strong></div>
+    </header>
+
+    <section id="segments" class="segments" aria-label="Live vote totals"></section>
+
+    <footer>
+      <div class="chat-hint"><span class="chat-icon">✦</span><span class="instructions"><span>Chat: <strong>!vote 1</strong> · Cheer: include <strong>!vote 1</strong> · Points: enter <strong>1</strong></span><small>Every 100 Bits or points adds a vote; each valid cheer or redemption counts at least one.</small></span></div>
+      <div class="total"><strong id="total-votes">0</strong><span>VOTES</span></div>
+    </footer>
+    <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div>
+    <section id="winner-screen" class="winner hidden" aria-live="assertive">
+      <div class="confetti confetti-one">✦</div><div class="confetti confetti-two">✧</div><div class="confetti confetti-three">✹</div>
+      <p class="reveal-kicker">THE LOBBY HAS SPOKEN</p>
+      <p class="winner-label">WINNER</p>
+      <h2 id="winner-name">Segment 1</h2>
+      <p id="winner-votes" class="winner-votes">0 votes</p>
+      <div class="winner-stats">
+        <div><strong id="winner-total">0</strong><span>TOTAL VOTES</span></div>
+        <div><strong id="winner-bits">0</strong><span>BITS SPENT</span></div>
+        <div><strong id="winner-points">0</strong><span>POINTS SPENT</span></div>
+      </div>
+      <p class="reveal-footer">GET READY — WE'RE STARTING WITH THIS!</p>
+    </section>
+  </main>
+  <script src="/overlay.js"></script>
+</body>
+</html>
